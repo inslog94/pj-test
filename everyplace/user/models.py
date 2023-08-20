@@ -49,6 +49,7 @@ def profile_img_upload_path(instance, filename):
 
 
 class User(AbstractUser):
+    username = None
     nickname = models.CharField(max_length=20, null=True, blank=True)
     profile_img = models.ImageField(upload_to=profile_img_upload_path, null=True, blank=True)
     email = models.EmailField(unique=True)
