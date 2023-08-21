@@ -42,7 +42,8 @@ def pin_photo_upload_path(instance, filename):
     # user_id에 따라 폴더 구분
     id_folder = str(instance.user_id.id)
     # pin_id에 따라 폴더 구분
-    pin_id_folder = str(instance.id)
+    pin_id_folder = str(instance.pin_id.id)
+    print(pin_id_folder)
     # 파일 경로 설정
     return os.path.join(id_folder, 'pin_photos', pin_id_folder, filename)
 
